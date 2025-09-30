@@ -4,11 +4,16 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 // ✅ Routes publiques
-Route::controller(HomeController::class)->group(function () {
-    Route::get('/', 'index')->name('home');             // Accueil
-    Route::get('/apropos', 'about')->name('about');     // À propos
-    Route::get('/section/{id}', 'section')->name('section.show'); // Détails Section
-});
+// routes/web.php
+Route::view('/', 'pages.public.home')->name('home');
+Route::view('/a-propos', 'pages.public.apropos')->name('apropos');
+Route::view('/sections', 'pages.public.section')->name('sections.index');
+
+// Route::controller(HomeController::class)->group(function () {
+//     Route::get('/', 'index')->name('home');             // Accueil
+//     Route::get('/apropos', 'about')->name('about');     // À propos
+//     Route::get('/section/{id}', 'section')->name('section.show'); // Détails Section
+// });
 
 // ✅ Inclusion des autres fichiers de routage
 require __DIR__.'/admin.php';
