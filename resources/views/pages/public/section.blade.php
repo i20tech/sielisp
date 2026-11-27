@@ -25,7 +25,7 @@
 
     {{-- Bandeau --}}
     <section class="mx-auto max-w-6xl px-4 lg:px-6 mt-8">
-        <h2 class="text-sm font-semibold tracking-wide uppercase text-black/60">Nos Sections/Sciences</h2>
+        <h2 class="text-4xl font-semibold tracking-wide uppercase text-black/60">Nos Sections/Sciences</h2>
         <figure class="mt-4 aspect-[16/7] rounded-2xl overflow-hidden shadow-soft">
             <img src="{{ asset('images/sections/banner.svg') }}" alt="Formules au tableau"
                 class="w-full h-full object-cover">
